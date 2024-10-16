@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            const elements = document.querySelectorAll('.animate-fadeIn');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('appear');
+                    }
+                });
+            });
+
+            elements.forEach((el) => observer.observe(el));
+        });
+    </script>
+    
+</head>
+<body class="bg-gray-800 text-white font-sans">
+
+    <!-- Navbar -->
+    <nav class="bg-gray-800 shadow mb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <a href="#" class="text-xl font-bold text-gray-400">ZulhidanCorp</a>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#about" class="text-gray-300 hover:text-blue-400">About Us</a>
+                    <a href="#services" class="text-gray-300 hover:text-blue-400">Services</a>
+                    <a href="#team" class="text-gray-300 hover:text-blue-400">Team</a>
+                    <a href="#contact" class="text-gray-300 hover:text-blue-400">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="bg-blue-700 text-white py-20 text-center animate-fadeIn bg-cover bg-center" style="background-image: url('pexels-eberhardgross-691668.jpg');">
+        <h1 class="text-4xl font-bold">Welcome to My Company</h1>
+        <p class="mt-4">Your trusted partner in success</p>
+        <a href="#contact" class="mt-6 inline-block bg-white text-gray-600 py-2 px-6 rounded-full hover:bg-blue-100 hover:animate-bounce">Get In Touch</a>
+    </div>
+    
+
+    <!-- About Us Section -->
+    <section id="about" class="max-w-5xl mx-auto py-12 px-4 text-center">
+        <h2 class="text-3xl font-semibold">About Us</h2>
+        <p class="mt-4 text-gray-300">ZulhidanCorp is a leading company focused on developing and implementing Internet of Things (IoT) solutions for various industrial sectors. Founded in 2020, we are committed to delivering advanced technologies that connect devices, systems, and people to create a more efficient, intelligent, and sustainable ecosystem.</p>
+        <p class="mt-4 text-gray-300">Vision: To be a leader in IoT innovation that connects the world in a smarter, more efficient, and more sustainable way.</p>
+        <p class="mt-4 text-gray-300">Mission: Technology Innovation, Improving Quality of Life, Sustainability, Education and Awareness, Strategic Partnerships.</p>
+    </section>
+
+    <!-- Services Section -->
+    <div class="bg-gray-800 text-white py-100 text-center animate-fadeIn">
+        <section id="services" class="max-w-5xl mx-auto py-12 px-4 text-center bg-cover bg-center" 
+                 style="background-image: url('pexels-njeromin-11542516.jpg'); min-height: 50vh;">
+            <h2 class="text-3xl font-semibold">Our Services</h2>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-chart-line text-3xl text-blue-400"></i>
+                    <h4 class="mt-4 text-xl font-semibold">Smart Home Solutions</h4>
+                    <p class="mt-2 text-white-300">Developing smart devices for the home, including security, lighting, and temperature control systems that can be accessed via a mobile app.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-laptop-code text-3xl text-blue-400"></i>
+                    <h4 class="mt-4 text-xl font-semibold">IoT in Agriculture</h4>
+                    <p class="mt-2 text-white-300">Soil and weather monitoring solutions to improve agricultural yields and water use efficiency.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-bullhorn text-3xl text-blue-400"></i>
+                    <h4 class="mt-4 text-xl font-semibold">Smart City</h4>
+                    <p class="mt-2 text-white-300">Development of connected city infrastructure to improve public services, safety, and energy efficiency.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-bullhorn text-3xl text-blue-400"></i>
+                    <h4 class="mt-4 text-xl font-semibold">Connected Health</h4>
+                    <p class="mt-2 text-white-300">Medical devices that enable remote health monitoring, providing real-time data to doctors and patients.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-bullhorn text-3xl text-blue-400"></i>
+                    <h4 class="mt-4 text-xl font-semibold">Smart Transportation</h4>
+                    <p class="mt-2 text-white-300">A traffic management system that uses IoT data to optimize traffic flow and reduce congestion.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    
+
+    <!-- Team Section -->
+    <section id="team" class="max-w-5xl mx-auto py-12 px-4 text-center">
+        <h2 class="text-3xl font-semibold">Our Team</h2>
+        <div class="mt-8 flex justify-center">
+            <div class="max-w-xs flex flex-col items-center">
+                <img src="IMG_20230305_134451_178.jpg" alt="Adil Zulhidan" class="w-40 h-40 object-cover rounded-full mb-4">
+                <h4 class="text-xl font-semibold">Adil Zulhidan</h4>
+                <p class="text-gray-300">CEO</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="max-w-5xl mx-auto py-12 px-4">
+        <h2 class="text-3xl font-semibold text-center">Contact Us</h2>
+        <form class="mt-8 space-y-4">
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-300">Name</label>
+                <input type="text" id="name" placeholder="Enter your name" 
+                    class="mt-1 block w-full border-gray-600 bg-gray-700 text-white rounded-md shadow-sm focus:outline focus:outline-blue-500">
+            </div>
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-300">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" 
+                    class="mt-1 block w-full border-gray-600 bg-gray-700 text-white rounded-md shadow-sm focus:outline focus:outline-blue-500">
+            </div>
+            <div>
+                <label for="message" class="block text-sm font-medium text-gray-300">Message</label>
+                <textarea id="message" rows="4" placeholder="Enter your message" 
+                    class="mt-1 block w-full border-gray-600 bg-gray-700 text-white rounded-md shadow-sm focus:outline focus:outline-blue-500"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">Send</button>
+        </form>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-6 text-center">
+        <p class="text-gray-400">&copy; 2024 Company Name. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
